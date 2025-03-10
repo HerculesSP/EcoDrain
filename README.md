@@ -3,7 +3,7 @@
 O EcoDrain é um projeto de desenvolvimento de um dispositivo de monitoramento do nível de resíduos no bueiro onde foi instalado.
 
 ## 📋 Objetivo do Projeto
-Desenvolver um dispositivo capaz de monitorar o nível de resíduos em bueiros, e emitindo um alerta quando necessário para os orgãos responsáveis efetuarem a limpeza, reduzindo o risco de enchentes.
+Desenvolver um dispositivo capaz de monitorar o nível de resíduos em bueiros que emite um alerta para que os orgãos responsáveis efetuarem a limpeza quando necessário, reduzindo o risco de enchentes.
 
 ### Funcionalidades
 - Monitoramento do nível de resíduos de um bueiro.
@@ -23,7 +23,7 @@ Desenvolver um dispositivo capaz de monitorar o nível de resíduos em bueiros, 
 - **Armazenamento de Dados:** MySQL.
 - **Ferramentas de Design:** Canva e Figma.
 - **IDE:** Visual Studio Code e Arduino IDE.
-- **Versionamento de Código:** Git, Github.
+- **Versionamento de Código:** Git e Github.
 
 
 Desenvolvido por Equipe EcoDrain para o Trabalho de Pesquisa e Inovação da Sprint 1 de Curso de Bacharelado em Ciências da Computação da SPTECH.
@@ -31,12 +31,12 @@ Desenvolvido por Equipe EcoDrain para o Trabalho de Pesquisa e Inovação da Spr
 
 ### 👷👷‍♀️ Membros da Equipe
 
-- [](https://www.linkedin.com/in/): Responsável
-- [](https://github.com/usuario/): Responsável 
-- [](https://www.linkedin.com/in/): Responsável
-- [](https://www.linkedin.com/in/): Responsável
-- [](http://www.linkedin.com/in/): Responsável 
-- [](https://www.linkedin.com/in/): Responsável
+- [Amanda O. da Silva](https://github.com/Amanda-Oliveira18): Responsável
+- [Beatriz B. C. da Silva](https://www.linkedin.com/in/beatrizbernardess): Responsável 
+- [Fernanda H. H. de Araújo](https://github.com/FernandaHenckel): Responsável
+- [Gabriela V. Montero](https://github.com/gabrielavmxx): Responsável
+- [Gustavo A. V. de Menezes](http://www.linkedin.com/in/): Responsável 
+- [Hércules da S. Pereira](https://www.linkedin.com/in/herculessp): Responsável
 
 
 ## 📝 Licença
