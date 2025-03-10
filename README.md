@@ -41,4 +41,4 @@ Desenvolvido por Equipe EcoDrain para o Trabalho de Pesquisa e Inovação da Spr
 
 ## 📝 Licença
 
-Este projeto está licenciado sob a Licença GPL-3.0. Veja o arquivo [LICENSE](./LICENSE) para mais detalhes.
+Este projeto está licenciado sob a Licença GNU GENERAL PUBLIC LICENSE. Veja o arquivo [LICENSE](./LICENSE) para mais detalhes.
