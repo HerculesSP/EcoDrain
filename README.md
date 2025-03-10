@@ -3,7 +3,7 @@
 O EcoDrain é um projeto de desenvolvimento de um dispositivo de monitoramento do nível de resíduos no bueiro onde foi instalado.
 
 ## 📋 Objetivo do Projeto
-Desenvolver um dispositivo capaz de monitorar o nível de resíduos em bueiros, assim alertando os orgãos responsáveis para efetuar a limpeza, reduzindo o risco de enchentes.
+Desenvolver um dispositivo capaz de monitorar o nível de resíduos em bueiros, e emitindo um alerta quando necessário para os orgãos responsáveis efetuarem a limpeza, reduzindo o risco de enchentes.
 
 ### Funcionalidades
 - Monitoramento do nível de resíduos de um bueiro.
