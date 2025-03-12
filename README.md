@@ -31,12 +31,12 @@ Desenvolvido por Equipe EcoDrain para o Trabalho de Pesquisa e Inovação da Spr
 
 ### 👷👷‍♀️ Membros da Equipe
 
-- [Amanda O. da Silva](https://github.com/Amanda-Oliveira18): Responsável
-- [Beatriz B. C. da Silva](https://www.linkedin.com/in/beatrizbernardess): Responsável 
-- [Fernanda H. H. de Araújo](https://github.com/FernandaHenckel): Responsável
-- [Gabriela V. Montero](https://github.com/gabrielavmxx): Responsável
-- [Gustavo A. V. de Menezes](http://www.linkedin.com/in/): Responsável 
-- [Hércules da S. Pereira](https://www.linkedin.com/in/herculessp): Responsável
+- [Amanda O. da Silva](https://github.com/Amanda-Oliveira18): Responsável por
+- [Beatriz B. C. da Silva](https://www.linkedin.com/in/beatrizbernardess): Responsável por 
+- [Fernanda H. H. de Araújo](https://github.com/FernandaHenckel): Responsável por
+- [Gabriela V. Montero](https://github.com/gabrielavmxx): Responsável por
+- [Gustavo A. V. de Menezes](http://www.linkedin.com/in/): Responsável por
+- [Hércules da S. Pereira](https://www.linkedin.com/in/herculessp): Responsável por
 
 
 ## 📝 Licença

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora EcoDrain</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient( #87ffe1, #64c2f8);
+            color: #333;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-attachment: fixed;
+        }
+        
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #87ffe1;
+            color: #000000;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: 600;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background-color: #60d1b5;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #333;
+        }
+        
+        p {
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        
+        input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            box-sizing: border-box;
+            
+        }
+        
+        .calculatora {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 30px;
+            width: 500px;
+        }
+
+        .resultado {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculatora">
+        <h1>Calculadora EcoDrain</h1>
+                <p>Quantidade de bueiros:</p>
+                <input type="number" id="input_bueiros" placeholder="Digite a quantidade de bueiros ">
+                <p>Quantidade de casas afetadas por enchentes:</p>
+                <input type="number" id="input_casas" placeholder="Digite a quantidade de casas">
+                <p>Moradores que processam o Estado: (%)</p>
+                <input type="number" id="input_porcentagem" placeholder="Digite a porcentagem de processos">
+            <button onclick="economia()">Calcular economia</button>
+            <div class="resultado" id="div_resultado"> Insira os dados para calcular a economia. </div>
+            <h6> *Levando em consideração a 
+                <a href="https://www.conjur.com.br/2022-jan-20/municipio-indenizara-moradores-tiveram-casa-inundada-enchente/">
+                jurisprudência do TJSP</a> que estabele a indenização no valor de R$20.000,00 para casas afetadas por enchentes. </h6>
+    </div>
+
+    <script>
+        function economia(){
+            if (input_bueiros.value == '' || input_casas.value == '' || input_porcentagem.value == ''){
+                div_resultado.innerHTML = `Valores inválidos.`;
+            } else {
+                var bueiros = Number(input_bueiros.value);
+                var casas = Number(input_casas.value);
+                var porcentagem = (Number(input_porcentagem.value))/100;
+                var processos = casas * 20000 * porcentagem;
+                const custo_un = 0; //preço unitário do dispositivo, a definir
+                var custo_total = bueiros * custo_un;
+                var economia = processos - custo_total;
+                const formatar = new Intl.NumberFormat('pt-BR', {
+                style: 'currency',
+                currency: 'BRL'
+                });
+                div_resultado.innerHTML = 
+                `Custo das indenizações: ${formatar.format(processos)}.* <br>
+                Dispositivos instalados: ${bueiros}. <br>
+                Custo dos dispositivos: ${formatar.format(custo_total)}. <br>
+                Valor economizado: ${formatar.format(economia)}.`;
+            }
+        }
+    </script>
+</body>
+</html>
