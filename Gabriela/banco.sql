@@ -1,11 +1,14 @@
 create database projetoPI;
 use projetoPI;
 
-create table rua
+
+
+create table bairro
 (
 endereco varchar(70) unique,
 idRua int primary key auto_increment 
 );
+
 insert into rua(endereco)
 values('rua francisco alarico bergamo'),
 ('rua pedrinha bonita'),

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora EcoDrain</title>
+</head>
+<body>
+    <div class="calculatora">
+        <h1>Como o projeto pode ajudar</h1>
+                <p>Capital</p>
+                <input id="input_bueiros" placeholder="Informe a quantidade de bueiros ">
+                <p>Casas afetadas por enchentes</p>
+                <input id="input_casas" placeholder="Informe a quantidade de casas">
+                <p>Moradores que processam o Estado (%)</p>
+                <input id="input_porcentagem" placeholder="Digite a porcentagem de processos">
+            <button onclick="calc()">Calcular</button>
+            <div id="div_resultado"> </div>
+    </div>
+
+    <script>
+        function calc(){
+            if (input_bueiros.value == '' || input_casas.value == '' || input_porcentagem.value == ''){
+                div_resultado.innerHTML = `Valores inválidos.`;
+            } else {
+                var bueiros = Number(input_bueiros.value);
+                var casas = Number(input_casas.value);
+                var porcentagem = (Number(input_porcentagem.value))/100;
+                var processos = casas * 20000 * porcentagem;
+
+                var custo_un = 70; //preço unitário do dispositivo, a definir
+                var custo_total = bueiros * custo_un;
+                var economia = processos - custo_total;
+                }
+                div_resultado.innerHTML = ("O preço unitário do produto é "+custo_un+ " o custo total do peojeto será de "+custo_total+ " e o valor a ser economizado será de R$"+economia)
+        }
+    </script>
+</body>
+</html>
