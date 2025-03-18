@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br"> 
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Define as configurações de visualização para dispositivos móveis -->
+    <title>Calculadora EcoDrain</title> <!-- Define o título da página, que aparecerá na aba do navegador -->
+</head>
+<body> 
+
+    
+        
+         <h1> <img src="logo.png" width="80" height="80"> Calculadora EcoDrain </h1>
+
+        <p>Quantidade de bueiros:</p> 
+        <input type="number" id="input_bueiros" placeholder="Digite a quantidade de bueiros"> <!-- Campo de entrada -->
+
+        <p>Quantidade de casas afetadas por enchentes:</p> 
+        <input type="number" id="input_casas" placeholder="Digite a quantidade de casas"> 
+
+        <p>Custo médio de reparos por casa afetada (R$):</p> 
+        <input type="number" id="input_reparos" placeholder="Digite o custo médio de reparos"> 
+
+        <button onclick="calcularEconomia()">Calcular economia</button> <!-- Botão que chama nossa função -->
+
+        <div id="div_resultado"> </div> <!-- Div para exibir o resultado do cálculo -->
+
+        <br> 
+
+            Insira os dados para calcular a economia. <!-- Texto inicial exibido enquanto o usuário não insere os dados -->
+        
+
+        <h6>
+        *Considerando o custo médio de reparos por casa afetada pelas enchentes e o valor da indenização de R$20.000,00 por casa afetada, conforme estabelecido pela jurisprudência do TJSP. 
+        </h6>
+
+    <script>
+        
+        function calcularEconomia(){
+
+            var bueiros = Number(input_bueiros.value); // Atribui a quantidade de bueiros ao valor da entrada
+                var casas = Number(input_casas.value); // Atribui a quantidade de casas afetadas ao valor da entrada
+                var custoreparos = Number(input_reparos.value); // Atribui o custo de reparos por casa ao valor da entrada
+
+            if (bueiros == '' || casas == '' || custoreparos == ''){
+                div_resultado.innerHTML = `Valores inválidos.`; // Se algum campo estiver vazio, exibe mensagem de erro
+            } else {
+                // Se todos os campos estiverem preenchidos, realiza os cálculos
+        
+                
+                var custostotais = casas * custoreparos; // Calcula o custo total de reparos multiplicando o número de casas pelo custo de reparos
+                const custoun = 50; // Define o custo unitário de instalação de um sensor como R$50
+                
+                var custototal = bueiros * custoun; // Calcula o custo total da instalação dos sensores multiplicando o número de bueiros pelo custo unitário
+                
+                var economia = custostotais - custototal; // Calcula a economia gerada pela instalação dos sensores, subtraindo o custo dos sensores do custo de reparos
+                
+                // Formata os valores em reais (R$) para exibição
+                const formatar = new Intl.NumberFormat('pt-BR', {
+                    style: 'currency', // Estilo de moeda
+                    currency: 'BRL' // Define a moeda como real (BRL)
+                });
+
+                div_resultado.innerHTML = 
+                `Custo total de reparos: ${formatar.format(custostotais)}.<br>
+                Dispositivos instalados: ${bueiros}.<br>
+                Custo dos dispositivos: ${formatar.format(custototal)}.<br>
+                Economia gerada: ${formatar.format(economia)}.`;
+            }
+        }
+    </script>
+
+</body>
+</html>
