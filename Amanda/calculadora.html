@@ -6,20 +6,21 @@
     <title>Calculadora EcoDrain</title>
   
 </head>
-<body>
+<body style="background-color: rgb(94, 222, 94);">
+    <center>
     <div class="calculatora">
-        <h1>Calculadora EcoDrain</h1>
+        <h1>Simulador Financeiro</h1>
                 <p>Quantidade de bueiros na proximidade:</p>
                 <input type="number" id="ipt_bueiros" placeholder="Digite a quantidade de bueiros ">
                 <p>Quantidade de casas afetadas por enchentes:</p>
                 <input type="number" id="ipt_casas" placeholder="Digite a quantidade de casas">
                 <p>Moradores que processam o Estado: (%)</p>
-                <input type="number" id="ipt_porcentagem" placeholder="Digite a porcentagem de processos">
+                <input type="number" id="ipt_porcentagem" placeholder="Digite a porcentagem de processos"> <br>
             <button onclick="economia()">Calcular economia</button>
             <div class="resultado" id="div_resultado"> Insira os dados para calcular a economia. </div>
-            <h4> *Levando em consideração a jurisprudência do TJSP que estabele a indenização no valor de R$20.000,00 para casas afetadas por enchentes. </h4>
+            <h4> *Levando em consideração a jurisprudência do TJSP que estabele a indenização <br> no valor de R$20.000,00 para casas afetadas por enchentes. </h4>
     </div>
-
+    </center>
     <script>
         function economia(){
             if (ipt_bueiros.value == '' || ipt_casas.value == '' || ipt_porcentagem.value == ''){
