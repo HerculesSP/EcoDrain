@@ -8,6 +8,7 @@ idRua int auto_increment primary key,
 nome_rua  varchar(100) NOT NULL,	
 num_bueiros int NOT NULL
 );
+
 create table bueiro(
 idBueiro int auto_increment primary key,
 tamanho_bueiro decimal(4,2) not null,
@@ -23,6 +24,15 @@ data_monitoramento timestamp default current_timestamp,
 fkbueiro int,	
 foreign key(fkbueiro) references bueiro(idBueiro)
 );
+
+create table usuario (
+idUsuario int auto_increment,
+nome varchar(70),
+cpf varchar(15),
+senha varchar(12),
+primary key(idUsuario)
+);
+
     
 insert into endereco(nome_rua, num_bueiros)
 values 
@@ -50,6 +60,14 @@ values
 (75, 9),  -- Bueiro de 80 cm (mais vazio)
 (69.7, 10); -- Bueiro de 76 cm (mais vazio)   
 select * from dados;
+
+insert into usuario (nome, cpf, senha) 
+values 
+('João Silva', '123.456.789-08', 'senha123'),  
+('Carlos Souza', '234.567.890-01', 'senhaabc'),  
+('Maria Oliveira', '987.654.321-07', 'senha456'),  
+('Ana Pereira', '345.678.901-02', 'senhaXYZ');  
+select * from usuario;
     
 -- o tamanho "padrao" dos bueiros inteligentes vamos aproximar a 70cm
 alter table bueiro modify tamanho_bueiro int not null default 70;
