@@ -17,8 +17,7 @@ SELECT * FROM endereco;
 CREATE TABLE bueiro (
     idBueiro INT AUTO_INCREMENT PRIMARY KEY,
     numeroRua VARCHAR(4) NOT NULL,
-    espaco_total DECIMAL(5,2) NOT NULL,
-    espaco_livre DECIMAL(5,2) NOT NULL
+    espaco_total DECIMAL(5,2) NOT NULL
 );
 
 INSERT INTO bueiro (idBueiro, numeroRua, espaco_total, espaco_livre) VALUES
@@ -33,7 +32,8 @@ CREATE TABLE dados (
     lixoqtd DECIMAL(5,2) NOT NULL,
     datalixo DATE NOT NULL,
     horariolixo TIME NOT NULL,
-    idBueiro INT, -- relacionamento com o bueiro
+    espaco_livre DECIMAL(5,2) NOT NULL,
+    idBueiro INT -- relacionamento com o bueiro
     CONSTRAINT fk_dados_bueiro FOREIGN KEY (idBueiro) REFERENCES bueiro(idBueiro)
 );
 
