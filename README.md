@@ -1,14 +1,14 @@
 # EcoDrain - Bueiros Inteligentes
 
-O EcoDrain é um projeto de desenvolvimento de um dispositivo de monitoramento do nível de resíduos no bueiro onde foi instalado.
+EcoDrain é uma solução inteligente que monitora em tempo real o nível de resíduos em bueiros urbanos.
 
 ## 📋 Objetivo do Projeto
-Desenvolver um dispositivo capaz de monitorar o nível de resíduos em bueiros que emite um alerta para que os orgãos responsáveis efetuarem a limpeza quando necessário, reduzindo o risco de enchentes.
+Desenvolver um dispositivo capaz de monitorar o nível de resíduos em bueiros e emitir um alerta para os orgãos responsáveis efetuarem a limpeza, reduzindo o risco de enchentes.
 
 ### Funcionalidades
-- Monitoramento do nível de resíduos de um bueiro.
+- Monitoramento do nível de resíduos em um determinado bueiro.
 - Armazenamento dos dados em um banco de dados MySQL.
-- Alerta do risco de entupimento e possíveis enchentes.
+- Alerta do risco de obstrução do bueiro e possíveis enchentes.
 - Conexão com um painel de monitoramento.
 ## 🛠️ Tecnologias Utilizadas
 
@@ -19,7 +19,7 @@ Desenvolver um dispositivo capaz de monitorar o nível de resíduos em bueiros q
 
 ### Software
 - **Site:** HTML, CSS e JavaSript.
-- **Backend:** C.
+- **Backend:** C++.
 - **Armazenamento de Dados:** MySQL.
 - **Ferramentas de Design:** Canva e Figma.
 - **IDE:** Visual Studio Code e Arduino IDE.
@@ -31,12 +31,12 @@ Desenvolvido por Equipe EcoDrain para o Trabalho de Pesquisa e Inovação da Spr
 
 ### 👷👷‍♀️ Membros da Equipe
 
-- [Amanda O. da Silva](https://github.com/Amanda-Oliveira18): Responsável
-- [Beatriz B. C. da Silva](https://www.linkedin.com/in/beatrizbernardess): Responsável 
-- [Fernanda H. H. de Araújo](https://github.com/FernandaHenckel): Responsável
-- [Gabriela V. Montero](https://github.com/gabrielavmxx): Responsável
-- [Gustavo A. V. de Menezes](http://www.linkedin.com/in/): Responsável 
-- [Hércules da S. Pereira](https://www.linkedin.com/in/herculessp): Responsável
+- [Amanda O. da Silva](https://github.com/Amanda-Oliveira18): Responsável por
+- [Beatriz B. C. da Silva](https://www.linkedin.com/in/beatrizbernardess): Responsável por 
+- [Fernanda H. H. de Araújo](https://github.com/FernandaHenckel): Responsável por
+- [Gabriela V. Montero](https://github.com/gabrielavmxx): Responsável por
+- [Gustavo A. V. de Menezes](http://www.linkedin.com/in/): Responsável por
+- [Hércules da S. Pereira](https://www.linkedin.com/in/herculessp): Responsável por
 
 
 ## 📝 Licença

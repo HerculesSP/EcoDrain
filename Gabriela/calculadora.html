@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Financeira</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Calculadora de Perdas Financeiras</h2>
+        <h4 for="valor">Valor médio perdido por enchente (R$):</h4>
+        <input type="number" id="ipt_valor">
+        
+        <h4 for="qtd">Quantidade de enchentes no ano:</h4>
+        <input type="number" id="ipt_qtd">
+        <br>
+        <button onclick="calcularPerda()">Calcular Perda Anual</button>
+        
+        <h3 id="resultado"></h3>
+        <div id='div_exibir'></div>
+    </div>
+
+    <script>
+        function calcularPerda() {
+            var valor = Number(ipt_valor.value)
+            var qtd = Number(ipt_qtd.value)
+            
+            if (valor == 0 || qtd == 0) {
+                alert("por favor, preencha os campos com dados validos.");
+            }
+            
+            var perdaTotal = valor * qtd;
+            div_exibir.innerHTML = ('Perca total estimada de R$'+perdaTotal)
+        }
+    </script>
+</body>
+</html>
