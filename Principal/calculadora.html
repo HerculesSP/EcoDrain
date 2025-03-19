@@ -6,8 +6,7 @@
     <title>Calculadora EcoDrain</title>
   
 </head>
-<body style="background-color: #B7E4C7;">
-    <center>
+<body>
     <div class="calculatora">
         <h1>Simulador Financeiro</h1>
                 <p>Quantidade de bueiros na proximidade:</p>
@@ -20,7 +19,6 @@
             <div class="resultado" id="div_resultado"> Insira os dados para calcular a economia. </div>
             <h4> *Levando em consideração a jurisprudência do TJSP que estabele a indenização <br> no valor de R$20.000,00 para casas afetadas por enchentes. </h4>
     </div>
-    </center>
     <script>
         function economia(){
             if (ipt_bueiros.value == '' || ipt_casas.value == '' || ipt_porcentagem.value == ''){
@@ -30,18 +28,15 @@
                 var casas = Number(ipt_casas.value);
                 var porcentagem = (Number(ipt_porcentagem.value))/100;
                 var processos = casas * 20000 * porcentagem;
-                var custo_un = 0; //preço unitário do dispositivo, a definir
+                var custo_un = 200; //preço unitário do dispositivo, estimado em 200 reais
                 var custo_total = bueiros * custo_un;
                 var economia = processos - custo_total;
-                const formatar = new Intl.NumberFormat('pt-BR', {
-                style: 'currency',
-                currency: 'BRL'
-                });
+                
                 div_resultado.innerHTML = 
-                `Custo das indenizações: ${formatar.format(processos)}.* <br>
-                Dispositivos instalados: ${bueiros}. <br>
-                Custo dos dispositivos: ${formatar.format(custo_total)}. <br>
-                Valor economizado: ${formatar.format(economia)}.`;
+                `Custo das indenizações: R$${processos}.* <br>
+                Dispositivos instalados: R$${bueiros}. <br>
+                Custo dos dispositivos: R$${custo_total}. <br>
+                Valor economizado: R$${economia}.`;
             }
         }
     </script>
