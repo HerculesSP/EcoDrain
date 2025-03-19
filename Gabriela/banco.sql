@@ -62,3 +62,18 @@ VALUES
     ('09.29', 4, 3);
     
     select * from dados;
+
+    create table usuario
+    (
+        idUsuario int primary key auto_increment,
+        nome varchar(50) not null,
+        email varchar(60) not null,
+        telefone varchar(14) not null
+    );
+
+    insert into usuario(nome,email,telefone)
+    values('Gabriela Villegas','gabriela@gmail.com','(11)99393-5924'),
+    ('Leticia Pinheiro','letucia@gmail.com','(11)99394-5859'),
+    ('Andrey Rodrigues','andrey@hotmail.com','(11)99458-2948'),
+    ('Gabriel Moreira','gabriel@gmail.com','(61)92833-2489'),
+    ('Isadora Alicia','isadora@oulook.com','(61)92488-2674');
