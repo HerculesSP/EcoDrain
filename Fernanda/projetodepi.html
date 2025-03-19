@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora financeira EcoDrain</title>
+</head>
+<body>
+    <h1>Calculadora Financeira EcoDrain</h1>
+    <h2>Quantidade de bueiros</h2>
+    <input type="number" id="ipt_bueiro"><br><br>
+    <h2>Quantidade de casas/ comércios afetadas por enchente</h2>
+    <input type="number" id="ipt_casas"><br><br>
+    <h2>Quantidade de moradores que processam o estado (%)</h2>
+    <input type="number" id="ipt_processos"><br><br>
+    <button onclick="calcular()">Calcular a economia</button>
+    <div id="resultado"></div>
+</body>
+</html>
+<script>
+    function calcular(){
+        var bueiro = Number (ipt_bueiro.value)
+        var casas = Number (ipt_casas.value)
+        var processos = Number (ipt_processos.value)
+        var porcentagem = processos / 100
+        var processos_mora = casas * 20000 * porcentagem
+        // valor indefinido no momento
+        var custo_un = 0 
+        var custo_total = bueiro * custo_un
+        var economia = processos - custo_un
+        if (bueiro == "" || casas == "" || processos == ""){
+            resultado.innerHTML = `Insira informações válidas`
+        }  else {
+            resultado.innerHTML =  `Custo das indenizações: ${processos_mora}. <br>
+                Dispositivos instalados: ${bueiro}. <br>
+                Custo dos dispositivos: ${custo_total}. <br>
+                Valor economizado: ${economia}.`
+            }
+    }
+</script>
